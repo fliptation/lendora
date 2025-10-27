@@ -10,27 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-      }
-      .btn-primary {
-        transition: transform 0.3s ease;
-      }
-      .btn-primary:hover {
-        transform: scale(1.05);
-      }
-    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              'cashare-primary': '#00B9D0',
+              'cashare-teal': '#00B9D0',
               'cashare-navy': '#2A3547',
               'cashare-gray': '#7C8FAC',
               'cashare-light': '#F9F9F9',
-              'cashare-green': '#B0CC22',
             }
           }
         }
@@ -39,134 +27,375 @@
   </head>
   <body class="bg-white text-cashare-navy">
 
+    <!-- NAVIGATION -->
+    <nav class="bg-white border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-cashare-navy">LENDORA</h1>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#solutions" class="text-cashare-gray hover:text-cashare-navy transition-colors">Lösungen</a>
+          <a href="#industries" class="text-cashare-gray hover:text-cashare-navy transition-colors">Branchen</a>
+          <a href="#about" class="text-cashare-gray hover:text-cashare-navy transition-colors">Über uns</a>
+          <a href="#" class="text-cashare-gray hover:text-cashare-navy border border-gray-300 px-4 py-2 rounded-md transition-colors">Login</a>
+          <a href="#" class="bg-cashare-teal text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-all">Demo buchen</a>
+        </div>
+      </div>
+    </nav>
+
     <!-- HERO -->
-    <section class="bg-gradient-to-br from-cashare-light to-white py-32 text-center">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-cashare-navy">LENDORA</h1>
-      <p class="text-2xl md:text-3xl mb-6 font-light text-cashare-navy">
-        Embedded Lending. Einfach. Sicher. Swiss Made.
-      </p>
-      <p class="text-lg text-cashare-gray mb-10 max-w-2xl mx-auto px-6">
-        Bieten Sie Ihren Kundinnen und Kunden Finanzierungen bis zu
-        <strong class="text-cashare-navy">60 Monate</strong> direkt in Ihrem Namen an – mit der Technologie
-        und Erfahrung von Cashare im Hintergrund.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center px-6">
-        <a href="#" class="btn-primary bg-cashare-primary text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-md">Demo anfragen</a>
-        <a href="#" class="btn-primary border-2 border-cashare-primary text-cashare-primary px-8 py-4 rounded-lg font-semibold text-lg">Partner werden</a>
+    <section class="bg-gradient-to-br from-white via-gray-50 to-teal-50 py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-5xl lg:text-6xl font-bold mb-6 text-cashare-navy leading-tight">
+              Embedded Lending für Ihr Unternehmen.
+            </h2>
+            <p class="text-xl text-cashare-gray mb-8 leading-relaxed">
+              Bieten Sie Ihren Kunden Finanzierungen bis zu 60 Monate direkt in Ihrem Namen an.
+              Digital, nahtlos integriert und ohne eigenes Kapital – powered by Cashare.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="#" class="bg-cashare-teal text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all inline-block text-center">Demo anfragen</a>
+              <a href="#" class="border-2 border-cashare-navy text-cashare-navy px-8 py-4 rounded-lg font-semibold hover:bg-cashare-navy hover:text-white transition-all inline-block text-center">Mehr erfahren</a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="bg-gradient-to-br from-cashare-teal to-cashare-teal rounded-2xl p-8 shadow-xl">
+              <div class="bg-white rounded-xl p-6 space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-cashare-gray">Finanzierungsanfrage</span>
+                  <span class="text-sm font-semibold text-cashare-teal">✓ Genehmigt</span>
+                </div>
+                <div class="border-t pt-4">
+                  <p class="text-2xl font-bold text-cashare-navy">CHF 15'000</p>
+                  <p class="text-sm text-cashare-gray">48 Monate Laufzeit</p>
+                </div>
+                <div class="grid grid-cols-3 gap-3 pt-4">
+                  <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-xs text-cashare-gray">Rate/Monat</p>
+                    <p class="text-lg font-semibold text-cashare-navy">CHF 340</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-xs text-cashare-gray">Zinssatz</p>
+                    <p class="text-lg font-semibold text-cashare-navy">4.9%</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-3">
+                    <p class="text-xs text-cashare-gray">Auszahlung</p>
+                    <p class="text-lg font-semibold text-cashare-navy">Sofort</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY -->
+    <section class="py-12 bg-white border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <p class="text-sm text-cashare-gray mb-6">Vertraut von führenden Unternehmen</p>
+        <div class="flex flex-wrap items-center gap-8 opacity-50">
+          <div class="text-xl font-semibold">Gastro.Zürich</div>
+          <div class="text-xl font-semibold">Partner AG</div>
+          <div class="text-xl font-semibold">Swiss Mobility</div>
+          <div class="text-xl font-semibold">EduFinance</div>
+        </div>
       </div>
     </section>
 
     <!-- WHAT IS LENDORA -->
-    <section class="py-24 px-6 md:px-20 text-center">
-      <h2 class="text-4xl font-bold mb-10 text-cashare-navy">Finanzierung, die sich nahtlos einfügt.</h2>
-      <p class="text-lg text-cashare-gray max-w-3xl mx-auto mb-16 leading-relaxed">
-        Mit <strong class="text-cashare-navy">LENDORA</strong> wird Kreditvergabe zum integrierten Service.
-        Unternehmen können direkt im eigenen Prozess – ob Online-Shop, Kursanmeldung oder
-        Verkaufsgespräch – Finanzierungen im eigenen Namen anbieten, während
-        <strong class="text-cashare-navy">Cashare</strong> alles im Hintergrund übernimmt: Prüfung, Verträge, Auszahlung,
-        Rückzahlung und Compliance.
-      </p>
-      <div class="grid md:grid-cols-4 gap-10 max-w-5xl mx-auto">
-        <div class="p-4">
-          <p class="font-bold mb-3 text-lg text-cashare-navy">💼 White-Label-Finanzierung</p>
-          <p class="text-cashare-gray">In Ihrem Namen, voll integriert.</p>
+    <section id="solutions" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h3 class="text-4xl lg:text-5xl font-bold mb-6 text-cashare-navy">
+            Finanzierung, die sich nahtlos einfügt.
+          </h3>
+          <p class="text-lg text-cashare-gray mb-12 leading-relaxed">
+            Mit LENDORA wird Kreditvergabe zum integrierten Service. Unternehmen können direkt im eigenen
+            Prozess Finanzierungen im eigenen Namen anbieten, während Cashare alles im Hintergrund übernimmt:
+            Prüfung, Verträge, Auszahlung, Rückzahlung und Compliance.
+          </p>
         </div>
-        <div class="p-4">
-          <p class="font-bold mb-3 text-lg text-cashare-navy">⏱ Laufzeiten bis 60 Monate</p>
-          <p class="text-cashare-gray">Flexibel und planbar.</p>
-        </div>
-        <div class="p-4">
-          <p class="font-bold mb-3 text-lg text-cashare-navy">💻 100 % digital</p>
-          <p class="text-cashare-gray">Von Antrag bis Auszahlung.</p>
-        </div>
-        <div class="p-4">
-          <p class="font-bold mb-3 text-lg text-cashare-navy">👥 Crowd-finanziert</p>
-          <p class="text-cashare-gray">Ohne Eigenkapitalbedarf.</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-cashare-teal bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">💼</span>
+            </div>
+            <h4 class="font-bold mb-2 text-lg text-cashare-navy">White-Label-Finanzierung</h4>
+            <p class="text-cashare-gray">In Ihrem Namen, voll integriert in Ihre Prozesse.</p>
+          </div>
+          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-cashare-teal bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">⏱</span>
+            </div>
+            <h4 class="font-bold mb-2 text-lg text-cashare-navy">Laufzeiten bis 60 Monate</h4>
+            <p class="text-cashare-gray">Flexibel und planbar für Ihre Kunden.</p>
+          </div>
+          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-cashare-teal bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">💻</span>
+            </div>
+            <h4 class="font-bold mb-2 text-lg text-cashare-navy">100% digital</h4>
+            <p class="text-cashare-gray">Von Antrag bis Auszahlung komplett digital.</p>
+          </div>
+          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-cashare-teal bg-opacity-10 rounded-lg flex items-center justify-center mb-4">
+              <span class="text-2xl">👥</span>
+            </div>
+            <h4 class="font-bold mb-2 text-lg text-cashare-navy">Crowd-finanziert</h4>
+            <p class="text-cashare-gray">Ohne Eigenkapitalbedarf für Sie.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- INDUSTRIES -->
-    <section class="bg-cashare-light py-24 px-6 md:px-20">
-      <h2 class="text-4xl font-bold text-center mb-16 text-cashare-navy">Eine Lösung für viele Branchen.</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-center">
-        <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="font-bold mb-4 text-lg text-cashare-navy">🎓 Bildung & Weiterbildung</h3>
-          <p class="text-cashare-gray leading-relaxed">Teilnehmende finanzieren Lehrgänge bequem in Raten.<br><em>Beispiel: Gastro.Zürich</em></p>
+    <section id="industries" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl mb-16">
+          <h3 class="text-4xl lg:text-5xl font-bold mb-6 text-cashare-navy">
+            Ihre Branche. Unsere Lösung.
+          </h3>
+          <p class="text-lg text-cashare-gray leading-relaxed">
+            LENDORA passt sich flexibel an verschiedene Geschäftsmodelle und Branchen an.
+          </p>
         </div>
-        <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="font-bold mb-4 text-lg text-cashare-navy">🛍️ E-Commerce & Handel</h3>
-          <p class="text-cashare-gray leading-relaxed">Kundinnen kaufen mehr, wenn sie in Raten zahlen können.</p>
-        </div>
-        <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="font-bold mb-4 text-lg text-cashare-navy">🚗 Mobilität & Fahrzeuge</h3>
-          <p class="text-cashare-gray leading-relaxed">Finanzierung von E-Bikes, Scootern oder Firmenfahrzeugen direkt beim Händler.</p>
-        </div>
-        <div class="p-8 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-          <h3 class="font-bold mb-4 text-lg text-cashare-navy">💆 Gesundheit & Lifestyle</h3>
-          <p class="text-cashare-gray leading-relaxed">Behandlungen oder Abos einfach finanzieren – ohne Papierkram.</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-50"></div>
+            <div class="p-8">
+              <h4 class="font-bold mb-3 text-2xl text-cashare-navy">Bildung & Weiterbildung</h4>
+              <p class="text-cashare-gray leading-relaxed mb-4">
+                Teilnehmende finanzieren Lehrgänge bequem in Raten. Erhöhen Sie Ihre Conversion-Rate
+                und ermöglichen Sie mehr Menschen Zugang zu Bildung.
+              </p>
+              <p class="text-sm text-cashare-teal font-semibold">Beispiel: Gastro.Zürich</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-teal-100 to-teal-50"></div>
+            <div class="p-8">
+              <h4 class="font-bold mb-3 text-2xl text-cashare-navy">E-Commerce & Handel</h4>
+              <p class="text-cashare-gray leading-relaxed mb-4">
+                Kundinnen kaufen mehr, wenn sie in Raten zahlen können. Steigern Sie Ihren durchschnittlichen
+                Warenkorbwert um bis zu 30%.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-50"></div>
+            <div class="p-8">
+              <h4 class="font-bold mb-3 text-2xl text-cashare-navy">Mobilität & Fahrzeuge</h4>
+              <p class="text-cashare-gray leading-relaxed mb-4">
+                Finanzierung von E-Bikes, Scootern oder Firmenfahrzeugen direkt beim Händler.
+                Verkaufen Sie mehr durch flexible Zahlungsoptionen.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="h-48 bg-gradient-to-br from-pink-100 to-pink-50"></div>
+            <div class="p-8">
+              <h4 class="font-bold mb-3 text-2xl text-cashare-navy">Gesundheit & Lifestyle</h4>
+              <p class="text-cashare-gray leading-relaxed mb-4">
+                Behandlungen oder Abos einfach finanzieren – ohne Papierkram. Machen Sie hochwertige
+                Dienstleistungen für mehr Menschen zugänglich.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="py-24 px-6 md:px-20 text-center">
-      <h2 class="text-4xl font-bold mb-16 text-cashare-navy">So funktioniert's</h2>
-      <div class="grid md:grid-cols-5 gap-8 max-w-6xl mx-auto">
-        <div class="p-4">
-          <p class="font-bold text-cashare-primary mb-3 text-2xl">1️⃣</p>
-          <p class="text-cashare-gray leading-relaxed">Kunde wählt Finanzierung direkt bei Ihnen</p>
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl mb-16">
+          <h3 class="text-4xl lg:text-5xl font-bold mb-6 text-cashare-navy">
+            So einfach funktioniert's
+          </h3>
+          <p class="text-lg text-cashare-gray leading-relaxed">
+            Von der Anfrage bis zur Auszahlung in wenigen Minuten – vollständig digital und nahtlos integriert.
+          </p>
         </div>
-        <div class="p-4">
-          <p class="font-bold text-cashare-primary mb-3 text-2xl">2️⃣</p>
-          <p class="text-cashare-gray leading-relaxed">LENDORA prüft Bonität in Echtzeit</p>
-        </div>
-        <div class="p-4">
-          <p class="font-bold text-cashare-primary mb-3 text-2xl">3️⃣</p>
-          <p class="text-cashare-gray leading-relaxed">Digitale Vertragsunterzeichnung</p>
-        </div>
-        <div class="p-4">
-          <p class="font-bold text-cashare-primary mb-3 text-2xl">4️⃣</p>
-          <p class="text-cashare-gray leading-relaxed">Auszahlung durch die Crowd</p>
-        </div>
-        <div class="p-4">
-          <p class="font-bold text-cashare-primary mb-3 text-2xl">5️⃣</p>
-          <p class="text-cashare-gray leading-relaxed">Sie erhalten den vollen Betrag sofort</p>
+
+        <div class="grid md:grid-cols-5 gap-8">
+          <div class="relative">
+            <div class="w-12 h-12 bg-cashare-teal text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">1</div>
+            <h4 class="font-semibold mb-2 text-cashare-navy">Anfrage</h4>
+            <p class="text-sm text-cashare-gray">Kunde wählt Finanzierung direkt bei Ihnen</p>
+          </div>
+          <div class="relative">
+            <div class="w-12 h-12 bg-cashare-teal text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">2</div>
+            <h4 class="font-semibold mb-2 text-cashare-navy">Prüfung</h4>
+            <p class="text-sm text-cashare-gray">Bonität wird in Echtzeit geprüft</p>
+          </div>
+          <div class="relative">
+            <div class="w-12 h-12 bg-cashare-teal text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">3</div>
+            <h4 class="font-semibold mb-2 text-cashare-navy">Vertrag</h4>
+            <p class="text-sm text-cashare-gray">Digitale Unterschrift in Sekunden</p>
+          </div>
+          <div class="relative">
+            <div class="w-12 h-12 bg-cashare-teal text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">4</div>
+            <h4 class="font-semibold mb-2 text-cashare-navy">Finanzierung</h4>
+            <p class="text-sm text-cashare-gray">Crowd finanziert den Kredit</p>
+          </div>
+          <div class="relative">
+            <div class="w-12 h-12 bg-cashare-teal text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">5</div>
+            <h4 class="font-semibold mb-2 text-cashare-navy">Auszahlung</h4>
+            <p class="text-sm text-cashare-gray">Sie erhalten den Betrag sofort</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- BENEFITS -->
-    <section class="bg-cashare-primary text-white py-24 px-6 md:px-20 text-center">
-      <h2 class="text-4xl font-bold mb-12">Warum Partner LENDORA wählen</h2>
-      <ul class="max-w-3xl mx-auto space-y-5 text-lg leading-relaxed">
-        <li class="py-2">💼 Keine eigene Finanzierung nötig – Cashare trägt das Risiko</li>
-        <li class="py-2">🚀 Mehr Umsatz & Conversion dank flexibler Zahlungsmodelle</li>
-        <li class="py-2">⚙️ Einfache Integration via API, Widget oder Link</li>
-        <li class="py-2">🔒 100 % Compliance & Sicherheit – Swiss regulated & proven</li>
-        <li class="py-2">🤝 White Label – Ihre Marke steht im Vordergrund</li>
-      </ul>
+    <section class="py-24 bg-cashare-navy text-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 class="text-4xl lg:text-5xl font-bold mb-8">
+              Warum Partner LENDORA wählen
+            </h3>
+            <p class="text-lg text-gray-300 mb-8">
+              Profitieren Sie von einer erprobten Lösung, die bereits von führenden Unternehmen eingesetzt wird.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-cashare-teal rounded-full flex items-center justify-center">
+                <span class="text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Kein Risiko für Sie</h4>
+                <p class="text-gray-300">Cashare übernimmt das vollständige Kreditrisiko</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-cashare-teal rounded-full flex items-center justify-center">
+                <span class="text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Mehr Umsatz</h4>
+                <p class="text-gray-300">Bis zu 30% höhere Conversion durch flexible Zahlungsoptionen</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-cashare-teal rounded-full flex items-center justify-center">
+                <span class="text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Einfache Integration</h4>
+                <p class="text-gray-300">Via API, Widget oder Link – in wenigen Tagen einsatzbereit</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-cashare-teal rounded-full flex items-center justify-center">
+                <span class="text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">100% Compliance</h4>
+                <p class="text-gray-300">Swiss regulated & proven – seit 2008 am Markt</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-6 h-6 bg-cashare-teal rounded-full flex items-center justify-center">
+                <span class="text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-1">Ihre Marke im Vordergrund</h4>
+                <p class="text-gray-300">White-Label-Lösung mit Ihrem Branding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- POWERED BY CASHARE -->
-    <section class="py-24 px-6 md:px-20 text-center">
-      <h2 class="text-4xl font-bold mb-8 text-cashare-navy">Powered by Cashare</h2>
-      <p class="text-lg text-cashare-gray max-w-3xl mx-auto leading-relaxed">
-        LENDORA basiert auf der Technologie und Erfahrung von
-        <strong class="text-cashare-navy">Cashare</strong>, der führenden Schweizer Plattform für Crowdlending seit 2008.
-        Über 200 Mio. CHF an vermittelten Krediten sprechen für sich – jetzt als Embedded Solution verfügbar.
-      </p>
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 class="text-4xl lg:text-5xl font-bold mb-6 text-cashare-navy">
+              Powered by Cashare
+            </h3>
+            <p class="text-lg text-cashare-gray leading-relaxed mb-6">
+              LENDORA basiert auf der Technologie und Erfahrung von Cashare, der führenden Schweizer
+              Plattform für Crowdlending seit 2008.
+            </p>
+            <div class="grid grid-cols-2 gap-6 mt-8">
+              <div>
+                <p class="text-4xl font-bold text-cashare-navy mb-2">200+ Mio.</p>
+                <p class="text-cashare-gray">CHF vermittelte Kredite</p>
+              </div>
+              <div>
+                <p class="text-4xl font-bold text-cashare-navy mb-2">15+ Jahre</p>
+                <p class="text-cashare-gray">Erfahrung am Markt</p>
+              </div>
+              <div>
+                <p class="text-4xl font-bold text-cashare-navy mb-2">50'000+</p>
+                <p class="text-cashare-gray">Zufriedene Kunden</p>
+              </div>
+              <div>
+                <p class="text-4xl font-bold text-cashare-navy mb-2">100%</p>
+                <p class="text-cashare-gray">Swiss Made</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-cashare-light to-white p-12 rounded-2xl">
+            <div class="bg-white p-8 rounded-xl shadow-lg">
+              <p class="text-cashare-teal font-bold text-lg mb-4">cashare.ch</p>
+              <p class="text-cashare-gray">
+                "Mit LENDORA können wir unsere bewährte Crowdlending-Technologie als
+                Embedded-Lösung anbieten und so noch mehr Menschen Zugang zu fairen
+                Finanzierungen ermöglichen."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CTA -->
-    <section class="bg-cashare-navy text-white py-32 text-center">
-      <h2 class="text-4xl font-bold mb-8">Bereit, Ihren Kundinnen Finanzierung anzubieten?</h2>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center px-6">
-        <a href="#" class="btn-primary bg-cashare-primary text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-md">Jetzt Partner werden</a>
-        <a href="#" class="btn-primary border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-cashare-navy">Demo buchen</a>
+    <section class="bg-gradient-to-br from-cashare-teal to-cashare-teal text-white py-24">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+        <h3 class="text-4xl lg:text-5xl font-bold mb-6">
+          Bereit für Embedded Lending?
+        </h3>
+        <p class="text-xl mb-10 opacity-90">
+          Bieten Sie Ihren Kunden heute noch flexible Finanzierungen an.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#" class="bg-white text-cashare-navy px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all inline-block">Jetzt Partner werden</a>
+          <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:bg-opacity-10 transition-all inline-block">Demo buchen</a>
+        </div>
       </div>
-      <p class="mt-10 text-cashare-gray text-sm">LENDORA – Embedded Lending powered by Cashare</p>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-cashare-navy text-white py-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <p class="text-lg font-bold mb-2">LENDORA</p>
+            <p class="text-gray-400 text-sm">Embedded Lending powered by Cashare</p>
+          </div>
+          <div class="flex gap-8 text-sm">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Impressum</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Datenschutz</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">AGB</a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </body>
 </html>
